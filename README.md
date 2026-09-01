@@ -37,7 +37,7 @@ parâmetros e observar automaticamente os resultados da simulação.
 
 ## 🧮 Principais recursos utilizados
 
-### Função `FV`
+### Função `VF`
 
 A função financeira `vf` (Valor Futuro) é utilizada para calcular o
 patrimônio projetado a partir de aportes mensais e de uma taxa de
@@ -61,7 +61,7 @@ acumulado e do rendimento da carteira:
 =patrimonio*rendimento_carteira
 ```
 
-### Função `VLOOKUP`
+### Função `PROCV`
 
 A função `PROCV` é utilizada para buscar o percentual de alocação
 correspondente ao perfil selecionado e ao tipo de FII:
