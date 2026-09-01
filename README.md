@@ -39,14 +39,14 @@ parâmetros e observar automaticamente os resultados da simulação.
 
 ### Função `FV`
 
-A função financeira `FV` (Valor Futuro) é utilizada para calcular o
+A função financeira `vf` (Valor Futuro) é utilizada para calcular o
 patrimônio projetado a partir de aportes mensais e de uma taxa de
 rendimento.
 
 Exemplo utilizado na planilha:
 
 ``` excel
-=FV($D$19,$A24*12,$D$17*-1)
+=vf($D$19,$A24*12,$D$17*-1)
 ```
 
 Essa lógica permite projetar o valor acumulado para diferentes períodos,
@@ -63,11 +63,11 @@ acumulado e do rendimento da carteira:
 
 ### Função `VLOOKUP`
 
-A função `VLOOKUP` é utilizada para buscar o percentual de alocação
+A função `PROCV` é utilizada para buscar o percentual de alocação
 correspondente ao perfil selecionado e ao tipo de FII:
 
 ``` excel
-=VLOOKUP($C$32&"-"&B36,Planilha2!A:D,4,FALSE)
+=PROCV($C$32&"-"&B36,Planilha2!A:D,4,FALSE)
 ```
 
 A chave é formada pela combinação do perfil e do tipo de FII.
@@ -77,7 +77,7 @@ A chave é formada pela combinação do perfil e do tipo de FII.
 O valor total destinado aos diferentes tipos de FII é consolidado com:
 
 ``` excel
-=SUM(D36:D41)
+=SOMA(D36:D41)
 ```
 
 ## 📊 Estrutura da planilha
@@ -115,7 +115,7 @@ E seis tipos de FII:
 -   Desenvolvimento
 -   Hotelarias
 
-Os percentuais de cada combinação são utilizados pela função `VLOOKUP`
+Os percentuais de cada combinação são utilizados pela função `PROCV`
 para alimentar automaticamente a distribuição apresentada na planilha
 principal.
 
